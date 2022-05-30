@@ -5,7 +5,7 @@ from sklearn import linear_model
 
 app = Flask(__name__)
        
-@app.route("/getCalories",methods=['POST'])
+@app.route("/getCalories",methods=['GET','POST'])
 def SuggestWeeklyCalories():
     # read csv file using pandas
     df = pd.read_csv('./finalDataAI.csv',dtype=str)
